@@ -1,11 +1,11 @@
-import express, { Request, Response } from 'express';
-const app = express();
-const port = 3000;
+import express, { Request, Response } from 'express'
+import {setupApp} from "./setupApp";
 
-app.get('/', (req: Request, res: Response) => {
-    res.send('Hello World!!!!!');
-})
+const app = express()
+const port = 3000
+
+setupApp(app);
 
 app.listen(port, () => {
-    console.log(`App started on port ${port}`);
+    console.log(`App started on port ${port}`)
 })
